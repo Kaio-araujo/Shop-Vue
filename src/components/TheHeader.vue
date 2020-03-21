@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">
             <img src="../assets/logo.png" width="30" height="30"/>
-        E-Vue
+        {{ title }}
         </a>
         <button class="navbar-toggler">
             <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,13 @@
 
 <script>
     export default {
-        name: "theHeader"
+        name: "theHeader",
+        props : {
+            title: {
+                type: String,
+                required: true,
+            },
+        }
     }
 </script>
 

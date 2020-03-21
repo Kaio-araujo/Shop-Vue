@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <the-header></the-header>
+    <the-header :title="monTitre"></the-header>
     <div class="d-flex flex-row">
       <shop class="w-75"></shop>
       <cart class="w-25"></cart>
@@ -18,7 +18,12 @@ export default {
   components: {
     TheHeader,
     Shop,
-    Cart
+    Cart,
+  },
+  data() {
+    return {
+      monTitre: "E-Vue",
+    }
   }
 }
 </script>
